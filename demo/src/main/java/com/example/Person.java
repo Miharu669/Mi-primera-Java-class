@@ -1,4 +1,5 @@
 package com.example;
+
 public class Person {
     private String firstName;
     private String lastName;
@@ -7,7 +8,8 @@ public class Person {
     private String countryOfBirth;
     private char gender;
 
-    public Person(String firstName, String lastName, String idNumber, int birthYear, String countryOfBirth, char gender) {
+    public Person(String firstName, String lastName, String idNumber, int birthYear, String countryOfBirth,
+            char gender) {
         if (gender != 'F' && gender != 'M' && gender != 'O') {
             throw new IllegalArgumentException("Gender must be 'F', 'M', or 'O'");
         }
@@ -80,12 +82,5 @@ public class Person {
                 ", countryOfBirth='" + countryOfBirth + '\'' +
                 ", gender=" + gender +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        Person person = new Person("Vero", "Doel", "666666666", 1989, "Spain", 'F');
-        System.out.println(person);
-        System.out.println("Country of Birth: " + person.getCountryOfBirth());
-        System.out.println("Gender: " + person.getGender());
     }
 }
