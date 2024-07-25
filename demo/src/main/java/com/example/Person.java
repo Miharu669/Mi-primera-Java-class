@@ -68,7 +68,6 @@ public class Person {
         }
         this.idNumber = idNumber;
     }
-    
 
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
@@ -80,6 +79,7 @@ public class Person {
         }
         this.countryOfBirth = countryOfBirth;
     }
+
     public void setGender(char gender) {
         if (gender != 'H' && gender != 'M' && gender != 'O') {
             throw new IllegalArgumentException("Gender must be 'H', 'M', or 'O'");
@@ -109,11 +109,4 @@ public class Person {
         System.out.println("Gender: " + gender);
     }
 
-    public static void main(String[] args) {
-        Person person1 = new Person("Vero", "Doel", "123456789", 1989, "Spain", 'M');
-        Person person2 = new Person("Paco", "Perez", "987654321", 1965, "Portugal", 'H');
-
-        person1.printPersonDetails();
-        person2.printPersonDetails();
-    }
 }
